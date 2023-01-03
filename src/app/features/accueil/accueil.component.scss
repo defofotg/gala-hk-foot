@@ -1,0 +1,26 @@
+@import "../../../main-styles.scss";
+
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 25px;
+
+  width: 100%;
+}
+app-last-event {
+  flex-grow: 1;
+}
+
+app-next-event {
+  width: 65%;
+  margin-right: 25px;
+}
+
+app-next-event,
+app-last-event {
+  border-radius: 7px;
+  border: 1px solid $light-grey-2;
+  box-shadow: -1px 2px 1px 0px rgba($color: #000000, $alpha: 0.08);
+
+  height: 350px;
+}
