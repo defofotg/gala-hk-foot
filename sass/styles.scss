@@ -1,0 +1,429 @@
+@charset "utf-8";
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./shadows.scss";
+
+@import "../node_modules/bulma/bulma.sass";
+
+html,
+body {
+  height: 100%;
+
+  font-size: 16px !important;
+
+  overflow: hidden !important;
+}
+
+.border-radius-15 {
+  border-radius: 15px;
+}
+
+.border-radius-25 {
+  border-radius: 25px;
+}
+
+.border-left-radius-15 {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.border-right-radius-15 {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+/** Pill components **/
+.team-name-pill {
+  @extend .team-name-italic-font;
+  @extend .border-radius-25;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(7px);
+  padding: 5px 10px;
+}
+
+@mixin content-pill($bg-color, $height) {
+  @extend .border-radius-25;
+  @extend .gray-box-shadow;
+  background-color: $bg-color;
+  height: $height;
+  width: 100%;
+}
+
+@mixin content-pill-var($bg-color, $height) {
+  @extend .border-radius-25;
+  @extend .gray-box-shadow;
+  background-color: $bg-color;
+  min-height: $height;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+@mixin content-pill-bg($url, $x, $y, $size) {
+  @extend .border-radius-25;
+  background-image: url($url);
+  background-position-x: $x;
+  background-position-y: $y;
+  background-size: $size;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content-pill-white-bg {
+  @include content-pill(rgba(255, 255, 255, 0.9), 180px);
+}
+
+.content-pill-grey-bg {
+  @include content-pill($light-grey, 300px);
+}
+
+.content-pill-blue-bg {
+  @include content-pill-var($light-blue-bg, 200px);
+}
+
+.content-pill-purple-bg {
+  @include content-pill-var($lightest-purple, 200px);
+}
+
+.content-pill-yellow-bg {
+  @include content-pill-var($light-yellow, 200px);
+}
+
+.content-pill-bg-hk {
+  @include content-pill-bg("../src/assets/hk.svg", 46%, 50%, 1200px);
+}
+
+.content-pill-bg-champions {
+  @include content-pill-bg("../src/assets/champions-pink.svg", 49%, -5px, 30%);
+}
+
+/** Pill components end **/
+
+/** Some components **/
+@mixin color-dot($color) {
+  content: "\A";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $color;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.navbar {
+  background-color: transparent;
+
+  .navbar-menu {
+    margin-left: 120px;
+  }
+}
+
+.menu-list {
+  &.authenticated li {
+    width: 25%;
+  }
+
+  a {
+    .icon-label {
+      font-size: 16px;
+    }
+
+    .icon i {
+      font-size: 20px;
+    }
+  }
+
+  .is-active {
+    .icon i {
+      color: $light-purple;
+    }
+
+    .icon-label {
+      font-weight: bold;
+    }
+  }
+}
+
+.team-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.team-name-container {
+  display: flex;
+}
+
+p.team-name {
+  &.red {
+    &::before {
+      @extend .red-dot;
+    }
+  }
+
+  &.yellow {
+    &::before {
+      @extend .yellow-dot;
+    }
+  }
+}
+
+.event-date {
+  @extend .event-date-font;
+  @extend .blue-box-shadow;
+  @extend .border-radius-25;
+  background-color: white;
+  margin: auto;
+  padding: 7px 0;
+  width: 120px;
+}
+
+.red-dot {
+  @include color-dot($red);
+}
+
+.yellow-dot {
+  @include color-dot($yellow);
+}
+
+//hr gris avec fade
+.fadeout-ends {
+  padding: 0 20px;
+  width: 100%;
+  hr {
+    height: 1px;
+    margin: 5px 0;
+    background: -webkit-gradient(
+      linear,
+      0 0,
+      100% 0,
+      from(rgba(0, 0, 0, 0)),
+      color-stop(0.5, $light-grey-2),
+      to(rgba(0, 0, 0, 0))
+    );
+    background: -webkit-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      $light-grey-2,
+      rgba(0, 0, 0, 0)
+    );
+    background: -moz-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      $light-grey-2,
+      rgba(0, 0, 0, 0)
+    );
+    background: -o-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      $light-grey-2,
+      rgba(0, 0, 0, 0)
+    );
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      $light-grey-2,
+      rgba(0, 0, 0, 0)
+    );
+    border: 0;
+
+    &:after {
+      display: block;
+      content: "";
+      height: 20px;
+      background-image: -webkit-gradient(
+        radial,
+        50% 0%,
+        0,
+        50% 0%,
+        116,
+        color-stop(0%, $light-grey-2),
+        color-stop(100%, rgba(255, 255, 255, 0))
+      );
+      background-image: -webkit-radial-gradient(
+        center top,
+        farthest-side,
+        $light-grey-2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-image: -moz-radial-gradient(
+        center top,
+        farthest-side,
+        $light-grey-2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-image: -o-radial-gradient(
+        center top,
+        farthest-side,
+        $light-grey-2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      background-image: radial-gradient(
+        farthest-side at center top,
+        $light-grey-2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}
+
+.score {
+  @extend .score-font;
+  @extend .border-radius-15;
+  display: flex;
+  .score-away,
+  .score-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lighter-purple;
+    height: 50px;
+    width: 50px;
+    margin: 0 2px 5px 2px;
+  }
+}
+
+.scorers {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  .home-goals,
+  .away-goals {
+    width: 48%;
+    padding: 0 10px;
+    ul {
+      width: 100%;
+      li {
+        @extend .scorer-font;
+        position: relative;
+        width: 100%;
+        span.name {
+          margin-right: 5px;
+        }
+
+        span i {
+          color: $deep-purple;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .home-goals ul li {
+    @extend .border-left-radius-15;
+    text-align: left;
+
+    span.badge {
+      left: 2px;
+    }
+  }
+
+  .away-goals ul li {
+    @extend .border-right-radius-15;
+    text-align: right;
+    span.badge {
+      right: 2px;
+    }
+  }
+}
+
+.stat-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+}
+
+/** Some components end **/
+
+/** Background **/
+.light-grey-bg {
+  background-color: $light-grey;
+}
+
+.blue-bg {
+  background-color: $blue;
+}
+/** Fin background **/
+
+/** Borders **/
+.light-grey-border {
+  border-right: 2px solid $light-grey-2;
+}
+
+.light-grey-border-normal {
+  border-right: 1px solid $light-grey-2;
+}
+
+.grey-right-border {
+  border-right: 2px solid $light-grey;
+}
+
+.light-grey-bottom-border {
+  border-bottom: 1px solid $light-grey-2;
+}
+/** End borders **/
+
+/** Forms **/
+.input {
+  background-color: white;
+  font-size: 14px;
+  @extend .border-radius-15;
+
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+
+.is-danger {
+  box-shadow: 0px 0px 3px 1px red;
+  border: unset;
+}
+
+.is-success {
+  box-shadow: 0px 0px 3px 1px $green;
+  border: unset;
+}
+
+.login_button {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:active {
+    background-color: $dark-blue;
+    color: white;
+  }
+}
+
+.light-purple-icon,
+.light-purple-label {
+  color: $light-purple;
+}
+
+.black-font {
+  color: black;
+}
+/** End **/

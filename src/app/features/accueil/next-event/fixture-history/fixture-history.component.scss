@@ -1,0 +1,21 @@
+.main-layout {
+  #head-to-head {
+    margin: auto;
+    width: 70%;
+    p {
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    .matches,
+    .goals {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .goals {
+      justify-content: space-between;
+    }
+  }
+}

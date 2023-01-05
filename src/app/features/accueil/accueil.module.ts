@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { NextEventComponent } from './next-event/next-event.component';
-import { LastEventComponent } from './last-event/last-event.component';
-import { StatComponent } from './next-event/stat/stat.component';
 import { AccueilComponent } from './accueil.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { LastEventModule } from './last-event/last-event.module';
+import { NextEventModule } from './next-event/next-event.module';
+import { TopScorersModule } from './top-scorers/top-scorers.module';
+import { AccueilRoutingModule } from './accueil-routing.module';
 
 @NgModule({
-  declarations: [
-    NextEventComponent,
-    LastEventComponent,
-    StatComponent,
-    AccueilComponent,
+  declarations: [AccueilComponent],
+  imports: [
+    AccueilRoutingModule,
+    SharedModule,
+    LastEventModule,
+    NextEventModule,
+    TopScorersModule,
   ],
-  imports: [],
-  exports: [],
+  exports: [AccueilComponent],
 })
 export class AccueilModule {}

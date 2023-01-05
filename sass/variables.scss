@@ -1,0 +1,53 @@
+// Set your brand colors
+$purple: #a59ad7;
+$pink: #fe76c2;
+$blue: #37c7f2;
+$blue-shiny: #2942de;
+$red: #ff1616;
+$yellow: #ffdd23;
+$green: green;
+
+$light-red: #fff3f3;
+
+$light-blue: #f0f2fc;
+$light-blue-bg: #e9f3ff;
+$light-grey: #f5f7f9;
+$light-grey-2: #e1e2e3;
+$light-grey-3: #eceeef;
+$light-grey-4: rgb(248, 248, 248, 0.8);
+$light-yellow: #f4eee2;
+$light: #fafcff;
+$dark: #9aa1a5;
+$dark-blue: #135589;
+$grey-titles: #bec0c2;
+$light-black: #1b2427;
+$light-black-2: #282f33;
+$light-purple: #2d76e4;
+$deep-purple: #401459;
+$lighter-purple: #e4e7f4;
+$lighter-purple-trans: #e4e7f48c;
+$lightest-purple: #eef1fb;
+$transparent-white: rgba(236, 232, 232, 0.9);
+
+// Update Bulma's global variables
+$family-sans-serif: "Prompt", sans-serif;
+
+$primary: $blue-shiny;
+$link: $blue;
+$text: $light-black;
+
+// Update some of Bulma's component variables
+$body-background-color: $dark;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color: #f3f5fa;
+$input-shadow: none;
+
+$icon-text-spacing: 0.725rem;
+
+$menu-item-color: $light-black-2;
+$menu-item-radius: 10px;
+$menu-item-hover-background-color: transparent;
+$menu-item-hover-color: $light-purple;
+$menu-item-active-color: $light-black;
+$menu-item-active-background-color: $light-grey-3;

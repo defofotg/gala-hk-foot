@@ -1,0 +1,14 @@
+.main-layout {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 10px 0 10px;
+
+  a {
+    font-weight: normal;
+    text-transform: uppercase;
+    align-self: center;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}

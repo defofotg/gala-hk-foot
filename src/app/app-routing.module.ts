@@ -1,23 +1,42 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AccueilComponent } from './features/accueil/accueil.component';
-import { AdministrationComponent } from './features/administration/administration.component';
-import { StatsComponent } from './features/stats/stats.component';
-import { TeamsComponent } from './features/teams/teams.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: DashboardComponent,
-    children: [
-      { path: 'accueil', component: AccueilComponent },
-      { path: 'equipes', component: TeamsComponent },
-      { path: 'statistiques', component: StatsComponent },
-      { path: 'administration', component: AdministrationComponent },
-    ],
+    path: 'accueil',
+    loadChildren: () =>
+      import('./features/accueil/accueil.module').then((m) => m.AccueilModule),
   },
-  { path: '**', redirectTo: 'accueil' },
+  {
+    path: 'equipes',
+    loadChildren: () =>
+      import('./features/teams/teams.module').then((m) => m.TeamsModule),
+  },
+  {
+    path: 'statistiques',
+    loadChildren: () =>
+      import('./features/stats/stats.module').then((m) => m.StatsModule),
+  },
+  {
+    path: 'administration',
+    loadChildren: () =>
+      import('./features/administration/administration.module').then(
+        (m) => m.AdministrationModule
+      ),
+  },
+  {
+    path: 'connexion',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'inscription',
+    loadChildren: () =>
+      import('./registration/registration.module').then(
+        (m) => m.RegistrationModule
+      ),
+  },
+  { path: '', redirectTo: 'accueil', pathMatch: 'full' },
 ];
 
 @NgModule({
