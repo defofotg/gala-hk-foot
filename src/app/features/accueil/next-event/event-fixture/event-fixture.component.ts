@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,8 +8,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './event-fixture.component.html',
   styleUrls: ['./event-fixture.component.scss'],
 })
-export class EventFixtureComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class EventFixtureComponent {}

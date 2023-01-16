@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "stats": "source-map-explorer dist/hk-foot/*.js --no-border-checks"
+    "stats": "source-map-explorer dist/hk-foot/*.js --no-border-checks",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -30,10 +31,18 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.1.1",
+    "@angular-eslint/builder": "15.2.0",
+    "@angular-eslint/eslint-plugin": "15.2.0",
+    "@angular-eslint/eslint-plugin-template": "15.2.0",
+    "@angular-eslint/schematics": "15.2.0",
+    "@angular-eslint/template-parser": "15.2.0",
     "@angular/cli": "~15.1.1",
     "@angular/compiler-cli": "^15.1.0",
     "@types/jasmine": "~4.0.0",
+    "@typescript-eslint/eslint-plugin": "5.48.1",
+    "@typescript-eslint/parser": "5.48.1",
     "compression-webpack-plugin": "^10.0.0",
+    "eslint": "^8.31.0",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StorageService } from './services/storage.service';
 import { TopBarComponent } from './shared/top-bar/top-bar.component';
@@ -11,7 +11,7 @@ import { TopBarComponent } from './shared/top-bar/top-bar.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'hk-foot';
   isLoggedIn = false;
 

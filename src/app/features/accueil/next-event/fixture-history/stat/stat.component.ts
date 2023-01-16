@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./stat.component.scss'],
 })
 export class StatComponent {
-  private _title: string = '';
-  private _value: string = '';
+  private _title = '';
+  private _value = '';
 
   @Input() set title(value: string) {
     this._title = value;

@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./team-logo.component.scss'],
 })
 export class TeamLogoComponent {
-  private _color: string = '';
-  private _name: string = '';
+  private _color = '';
+  private _name = '';
 
   @Input() set color(value: string) {
     this._color = value;

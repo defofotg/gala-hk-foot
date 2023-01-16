@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { VersusTeamComponent } from 'src/app/shared/versus-team/versus-team.component';
 
 @Component({
@@ -9,8 +9,4 @@ import { VersusTeamComponent } from 'src/app/shared/versus-team/versus-team.comp
   templateUrl: './last-event.component.html',
   styleUrls: ['./last-event.component.scss'],
 })
-export class LastEventComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class LastEventComponent {}
