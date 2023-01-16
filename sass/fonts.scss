@@ -1,0 +1,68 @@
+/* Fonts */
+.uppercase-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.event-date-font {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.team-name-italic-font {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.team-name-capital-font {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.head-to-head-title-font {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.small-grey-title {
+  color: $grey-titles;
+  font-size: 12px;
+}
+
+.fixture-title {
+  @extend .uppercase-title;
+}
+
+.stat-title-font {
+  @extend .small-grey-title;
+}
+
+.scorer-team-name-font {
+  @extend .small-grey-title;
+  font-style: italic;
+}
+
+.score-font {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.scorer-font {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* End fonts */

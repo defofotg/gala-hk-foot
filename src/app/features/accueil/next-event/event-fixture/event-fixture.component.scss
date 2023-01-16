@@ -1,0 +1,52 @@
+.main-layout {
+  .bg-img {
+    .teams {
+      position: absolute;
+      bottom: 0;
+      border-radius: inherit;
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+      width: 100%;
+      z-index: 2;
+
+      .home,
+      .away {
+        position: relative;
+        border-radius: inherit;
+        height: 100%;
+        width: 50%;
+        img {
+          position: absolute;
+          height: 120px;
+          bottom: 0;
+        }
+
+        .team-name {
+          position: absolute;
+          bottom: 20px;
+          z-index: 5;
+        }
+      }
+
+      .home {
+        img {
+          left: 10px;
+        }
+        .team-name {
+          left: 50px;
+        }
+      }
+
+      .away {
+        img {
+          right: 10px;
+        }
+
+        .team-name {
+          right: 50px;
+        }
+      }
+    }
+  }
+}

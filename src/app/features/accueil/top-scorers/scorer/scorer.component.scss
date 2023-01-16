@@ -1,0 +1,54 @@
+.centered-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-layout {
+  background-color: white;
+  display: flex;
+  margin-bottom: 5px;
+  height: 50px;
+  width: 100%;
+
+  .ranking {
+    @extend .centered-element;
+    width: 10%;
+  }
+
+  .scorer-description {
+    @extend .centered-element;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .scorer-shirt-number {
+      @extend .centered-element;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      font-weight: bolder;
+    }
+
+    .scorer-name-and-team {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15px;
+      height: 100%;
+      .scorer-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 15px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .goals-number {
+    @extend .centered-element;
+    font-size: 16px;
+    width: 10%;
+  }
+}

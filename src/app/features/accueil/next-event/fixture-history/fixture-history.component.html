@@ -1,0 +1,18 @@
+<div class="content-pill-blue-bg main-layout">
+  <app-versus-team></app-versus-team>
+  <div id="head-to-head">
+    <p class="head-to-head-title-font">TETE à TETE</p>
+    <div class="fadeout-ends"><hr /></div>
+    <div class="stats">
+      <div class="matches">
+        <app-stat [title]="win" value="17"></app-stat>
+        <app-stat [title]="draw" value="12"></app-stat>
+        <app-stat [title]="win" value="16"></app-stat>
+      </div>
+      <div class="goals">
+        <app-stat [title]="scored" value="37"></app-stat>
+        <app-stat [title]="scored" value="46"></app-stat>
+      </div>
+    </div>
+  </div>
+</div>

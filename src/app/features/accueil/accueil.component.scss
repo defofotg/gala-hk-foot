@@ -1,0 +1,17 @@
+.main-layout {
+  //background-color: #f8f8f8;
+  background-color: #f8f8f8ba;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100% - 60px);
+  padding-bottom: 15px;
+}
+
+app-next-event,
+app-last-event,
+app-top-scorers {
+  width: 94%;
+}
