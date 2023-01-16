@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-team-logo',
   templateUrl: './team-logo.component.html',
   styleUrls: ['./team-logo.component.scss'],

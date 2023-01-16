@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-stat',
   templateUrl: './stat.component.html',
   styleUrls: ['./stat.component.scss'],
