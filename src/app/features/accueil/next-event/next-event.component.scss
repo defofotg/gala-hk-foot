@@ -1,15 +1,4 @@
-.layout-container {
-  position: relative;
-}
-
-app-event-fixture {
-  position: absolute;
-  top: -65px;
-  width: 100%;
-}
-
+app-event-fixture,
 app-fixture-history {
-  display: inline-flex;
-  margin-top: 130px;
   width: 100%;
 }

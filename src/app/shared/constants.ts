@@ -8,3 +8,5 @@ export const statConstants = {
   draw: 'Nuls',
   goals: 'Buts',
 };
+
+export const appName = 'Gala HK';

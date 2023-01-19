@@ -1,21 +1,49 @@
 .main-layout {
-  background-color: transparent;
+  padding: 0 20px 0px 20px;
   display: flex;
   justify-content: space-between;
-  height: 50px;
-  padding: 0 10px 0 10px;
+  flex-direction: column;
 
-  a {
-    display: block;
-    img {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    a {
+      &:active,
+      &:focus {
+        background-color: rgb(1, 103, 172);
+      }
       height: 100%;
-    }
-  }
 
-  a.button {
-    font-weight: normal;
-    //text-transform: uppercase;
-    align-self: center;
-    //background-color: rgba(255, 255, 255, 0.4);
+      img {
+        height: 100%;
+      }
+
+      &.auth-icon {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        .icon-signin,
+        .icon-signout {
+          align-self: center;
+          background-size: cover;
+          background-position: center;
+          height: 20px;
+          width: 20px;
+        }
+
+        .icon-signout {
+          background-image: url(../../../assets/signout.svg);
+        }
+
+        .icon-signin {
+          background-image: url(../../../assets/signin.svg);
+        }
+      }
+    }
   }
 }

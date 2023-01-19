@@ -43,6 +43,11 @@ body {
   border-bottom-left-radius: 5px;
 }
 
+.border-bottom-radius-15 {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .w100 {
   width: 100%;
 }
@@ -358,12 +363,20 @@ p.team-name {
 /** Some components end **/
 
 /** Background **/
+.smoky-bg {
+  background-color: $smoky-black;
+}
+
 .light-grey-bg {
   background-color: $light-grey;
 }
 
 .blue-bg {
-  background-color: $blue;
+  background-color: $spanish-blue;
+}
+
+.blue-dark-bg {
+  background-color: $spanish-blue-dark;
 }
 /** Fin background **/
 
@@ -423,6 +436,31 @@ p.team-name {
   color: white;
   font-size: 14px;
   text-align: center;
+
+  &:hover {
+    border-color: $spanish-blue;
+  }
+
+  &:active {
+    border-color: $spanish-blue;
+    color: $light-blue;
+  }
+}
+
+.secondary-button {
+  background-color: white;
+  color: $spanish-blue;
+  font-size: 14px;
+  text-align: center;
+
+  &:hover {
+    border-color: $spanish-blue;
+  }
+
+  &:active {
+    border-color: white;
+    color: $light-blue;
+  }
 }
 
 .login_button {
@@ -432,7 +470,7 @@ p.team-name {
 
   &:active {
     background-color: $dark-blue;
-    color: white;
+    color: $light-blue;
   }
 }
 

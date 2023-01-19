@@ -31,6 +31,10 @@ $transparent-white: rgba(236, 232, 232, 0.9);
 $teal-blue: rgba(0, 112, 144);
 $imperial-red: rgba(255, 0, 53);
 $spanish-blue: rgba(1, 111, 185);
+$spanish-blue-dark: rgb(4, 60, 98);
+
+//$smoky-black: #0f110c;
+$smoky-black: #1a1a1a;
 
 // Update Bulma's global variables
 $family-sans-serif: "Prompt", sans-serif;
@@ -60,7 +64,7 @@ $input-focus-box-shadow-color: $spanish-blue;
 
 $button-background-color: $spanish-blue;
 $button-border-color: none;
-$button-disabled-background-color: rgb(4, 60, 98);
-$button-disabled-border-color: rgb(4, 60, 98);
+$button-disabled-background-color: $spanish-blue-dark;
+$button-disabled-border-color: $spanish-blue-dark;
 $button-focus-border-color: $spanish-blue;
 $button-focus-box-shadow-size: 0 0 0 0;

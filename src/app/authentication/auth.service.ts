@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { User } from '../models/user';
+import { Observable } from 'rxjs';
+import { User, UserTokenInfo } from '../models/user';
 import { StorageService } from '../services/storage.service';
 
 const AUTH_API = 'http://localhost:8080/api/auth/';
@@ -16,8 +16,8 @@ const httpOptions = {
 export class AuthService {
   constructor(private http: HttpClient, private storage: StorageService) {}
 
-  public signIn(user: User): Observable<any> {
-    return this.http.post(
+  public signIn(user: User): Observable<UserTokenInfo> {
+    return this.http.post<UserTokenInfo>(
       AUTH_API + 'signin',
       {
         login: user.email,

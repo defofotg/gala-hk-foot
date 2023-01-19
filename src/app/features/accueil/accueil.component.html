@@ -1,5 +1,14 @@
-<div class="gap-block"></div>
 <div class="main-layout">
+  <div class="main-body blue-bg border-bottom-radius-15">
+    <p class="greeting-txt">Hello,</p>
+    <p *ngIf="user" class="greeting-txt">
+      <span class="user-firstname">{{ user }}</span> !
+    </p>
+    <p>
+      Bienvenue sur <strong>{{ applicationName }}</strong
+      >.
+    </p>
+  </div>
   <app-next-event></app-next-event>
   <app-last-event></app-last-event>
   <app-top-scorers></app-top-scorers>

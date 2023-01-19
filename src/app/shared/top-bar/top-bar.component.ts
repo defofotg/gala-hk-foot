@@ -14,7 +14,6 @@ import { StorageService } from 'src/app/services/storage.service';
 export class TopBarComponent implements OnInit {
   isLoggedIn = false;
   isHidden = false;
-
   constructor(
     private storageService: StorageService,
     private authService: AuthService,
