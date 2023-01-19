@@ -1,0 +1,44 @@
+<h1 class="level-1-title">Connexion</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="border-radius-15">
+  <div class="form-container">
+    <div class="field">
+      <div class="control">
+        <input
+          id="email"
+          class="input"
+          type="email"
+          placeholder="Adresse@email.fr"
+          formControlName="email"
+          [ngClass]="{
+            'is-danger': error.email
+          }"
+        />
+      </div>
+      <p *ngIf="error.email" class="help is-danger">Adresse e-mail invalide</p>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <input
+          id="password"
+          class="input"
+          type="password"
+          placeholder="Mot de passe"
+          formControlName="password"
+          [ngClass]="{
+            'is-danger': error.password
+          }"
+        />
+      </div>
+      <p *ngIf="error.password" class="help is-danger">Mot de passe invalide</p>
+    </div>
+    <button
+      id="login_button"
+      class="button full-width login_button"
+      type="submit"
+      [disabled]="!loginForm.valid"
+    >
+      <span> Connexion </span>
+    </button>
+  </div>
+</form>

@@ -1,82 +1,8 @@
-<div class="main-layout">
-  <div class="logo">
-    <img src="../../assets/logo.png" />
-  </div>
-  <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onSubmit()">
-    <div class="form-container">
-      <div class="field">
-        <label class="label form-label">Adresse e-mail</label>
-        <div class="control">
-          <input
-            id="email"
-            class="input light-grey-border-normal"
-            type="email"
-            placeholder="adresse@email.fr"
-            formControlName="email"
-            [ngClass]="{
-              'is-danger':
-                loginForm.get('email')?.touched &&
-                loginForm.get('email')?.invalid
-            }"
-          />
-        </div>
-        <p
-          *ngIf="
-            loginForm.get('email')?.touched && loginForm.get('email')?.invalid
-          "
-          class="help is-danger"
-        >
-          Adresse e-mail invalide
-        </p>
-      </div>
-
-      <div class="field">
-        <label class="label form-label">Mot de passe</label>
-        <div class="control">
-          <input
-            class="input light-grey-border-normal"
-            type="password"
-            placeholder="min. 8 caractères"
-            formControlName="password"
-            [ngClass]="{
-              'is-danger':
-                loginForm.get('password')?.touched &&
-                loginForm.get('password')?.invalid
-            }"
-          />
-        </div>
-        <p
-          *ngIf="
-            loginForm.get('password')?.touched &&
-            loginForm.get('password')?.hasError('required')
-          "
-          class="help is-danger"
-        >
-          Mot de passe invalide
-        </p>
-        <p
-          *ngIf="
-            loginForm.get('password')?.touched &&
-            loginForm.get('password')?.hasError('minlength')
-          "
-          class="help is-danger"
-        >
-          Le mot de passe doit contenir au moins 8 caractères
-        </p>
-      </div>
-
-      <div class="field is-grouped">
-        <div class="control">
-          <button
-            id="login_button"
-            class="button is-rounded is-full-width login_button"
-            type="submit"
-            [disabled]="!loginForm.valid"
-          >
-            <span> Connexion </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
+<div class="main-layout has-background-black">
+  <app-login-form
+    (submit)="onSubmit()"
+    [loginForm]="loginForm"
+    [pending]="pending"
+    [error]="error"
+  ></app-login-form>
 </div>

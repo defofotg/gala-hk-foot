@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'src/app/authentication/auth.service';
 import { StorageService } from 'src/app/services/storage.service';
 
@@ -13,23 +13,28 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class TopBarComponent implements OnInit {
   isLoggedIn = false;
+  isHidden = false;
 
   constructor(
     private storageService: StorageService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.isLoggedIn = this.storageService.isLoggedIn();
+    this.storageService.getLoginStatusObservable().subscribe({
+      next: (isLogged) => (this.isLoggedIn = isLogged),
+    });
+    this.router.events.subscribe(() => {
+      this.isHidden = this.router.url === '/connexion';
+    });
   }
 
   logout(): void {
     this.authService.logout().subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
         this.storageService.clean();
-
-        window.location.reload();
+        this.router.navigate(['/accueil']);
       },
       error: (err) => {
         console.log(err);
