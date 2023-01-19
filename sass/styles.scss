@@ -423,6 +423,15 @@ p.team-name {
   color: white;
   font-size: 14px;
   text-align: center;
+
+  &:hover {
+    border-color: $spanish-blue;
+  }
+
+  &:active {
+    border-color: $spanish-blue;
+    color: $light-blue;
+  }
 }
 
 .login_button {
@@ -432,7 +441,7 @@ p.team-name {
 
   &:active {
     background-color: $dark-blue;
-    color: white;
+    color: $light-blue;
   }
 }
 
