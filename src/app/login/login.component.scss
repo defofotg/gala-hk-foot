@@ -1,39 +1,18 @@
 .main-layout {
   display: flex;
-  background-color: white;
-  background-image: url("../../assets/background.jpeg");
+  background-image: url("../../assets/shoes.png");
+  background-color: black;
+  background-size: contain;
+  background-position-x: 110px;
+  background-position-y: 25%;
+  background-repeat: no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 
-  .logo {
-    display: flex;
-    margin-bottom: 20px;
-    img {
-      height: 200px;
-      width: 160px;
-    }
-  }
-
-  form {
-    height: 320px;
-    width: 92%;
-
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-
-      .field {
-        width: 90%;
-
-        .control {
-          width: 100%;
-        }
-      }
-    }
+  app-login-form {
+    width: 94%;
   }
 }

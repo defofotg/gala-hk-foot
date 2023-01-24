@@ -17,6 +17,10 @@ body {
   overflow: hidden !important;
 }
 
+.border-radius-5 {
+  border-radius: 5px;
+}
+
 .border-radius-15 {
   border-radius: 15px;
 }
@@ -382,18 +386,26 @@ p.team-name {
 /** End borders **/
 
 /** Forms **/
+.field {
+  min-height: 82px;
+}
+
 .input {
   background-color: white;
   font-size: 14px;
-  @extend .border-radius-15;
+  height: 50px;
+  @extend .border-radius-5;
+  &.is-danger {
+    box-shadow: 0 0 0 0.125em red;
+    border: 2px solid red;
+  }
 
   &::placeholder {
-    font-size: 12px;
+    color: $grey;
   }
 }
 
 .is-danger {
-  box-shadow: 0px 0px 3px 1px red;
   border: unset;
 }
 
@@ -402,15 +414,21 @@ p.team-name {
   border: unset;
 }
 
-.login_button {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: black;
-  display: block;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-  text-transform: uppercase;
+.full-width {
   width: 100%;
+}
+
+.main-button {
+  background-color: $spanish-blue;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login_button {
+  @extend .main-button;
+  display: block;
+  height: 50px;
 
   &:active {
     background-color: $dark-blue;

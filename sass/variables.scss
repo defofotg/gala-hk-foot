@@ -28,6 +28,9 @@ $lighter-purple: #e4e7f4;
 $lighter-purple-trans: #e4e7f48c;
 $lightest-purple: #eef1fb;
 $transparent-white: rgba(236, 232, 232, 0.9);
+$teal-blue: rgba(0, 112, 144);
+$imperial-red: rgba(255, 0, 53);
+$spanish-blue: rgba(1, 111, 185);
 
 // Update Bulma's global variables
 $family-sans-serif: "Prompt", sans-serif;
@@ -51,3 +54,13 @@ $menu-item-hover-background-color: transparent;
 $menu-item-hover-color: $light-purple;
 $menu-item-active-color: $light-black;
 $menu-item-active-background-color: $light-grey-3;
+
+$input-focus-border-color: $spanish-blue;
+$input-focus-box-shadow-color: $spanish-blue;
+
+$button-background-color: $spanish-blue;
+$button-border-color: none;
+$button-disabled-background-color: rgb(4, 60, 98);
+$button-disabled-border-color: rgb(4, 60, 98);
+$button-focus-border-color: $spanish-blue;
+$button-focus-box-shadow-size: 0 0 0 0;

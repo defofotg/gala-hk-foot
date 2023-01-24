@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 const USER_KEY = 'auth-user';
 
@@ -6,11 +7,19 @@ const USER_KEY = 'auth-user';
   providedIn: 'root',
 })
 export class StorageService {
-  clean(): void {
+  private loggedInInfo: BehaviorSubject<boolean>;
+
+  constructor() {
+    this.loggedInInfo = new BehaviorSubject<boolean>(this.isLoggedIn());
+  }
+
+  public clean(): void {
+    this.setValue(false);
     window.sessionStorage.clear();
   }
 
   public saveUser(user: any): void {
+    this.setValue(true);
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
@@ -31,5 +40,13 @@ export class StorageService {
     }
 
     return false;
+  }
+
+  getLoginStatusObservable(): Observable<boolean> {
+    return this.loggedInInfo.asObservable();
+  }
+
+  setValue(newValue: boolean): void {
+    this.loggedInInfo.next(newValue);
   }
 }

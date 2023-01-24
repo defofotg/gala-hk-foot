@@ -1,12 +1,11 @@
-<div class="main-layout light-grey-bottom-border">
-  <img src="../../../assets/logo-black.png" alt="logo-hk" />
-  <a
-    *ngIf="!isLoggedIn"
-    class="button is-rounded is-small"
-    routerLink="./connexion"
+<div *ngIf="!isHidden" class="main-layout light-grey-bottom-border">
+  <a routerLink="./accueil"
+    ><img src="../../../assets/logo-black.png" alt="logo-hk"
+  /></a>
+  <a *ngIf="!isLoggedIn" class="button main-button" routerLink="./connexion"
     >Se connecter</a
   >
-  <a *ngIf="isLoggedIn" class="button is-rounded is-small" (click)="logout()"
+  <a *ngIf="isLoggedIn" class="button main-button" (click)="logout()"
     >Déconnexion</a
   >
 </div>

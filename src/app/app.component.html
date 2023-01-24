@@ -1,7 +1,7 @@
 <div class="layout-box">
   <div class="main-content">
     <app-top-bar></app-top-bar>
-    <div class="side-bar light-grey-bg light-grey-border">
+    <div *ngIf="!isHidden" class="side-bar light-grey-bg light-grey-border">
       <aside class="menu">
         <img src="../../../assets/logo.png" alt="" />
         <p class="menu-label">General</p>
@@ -44,9 +44,9 @@
             <a routerLink="./administration" routerLinkActive="is-active">
               <span class="icon-text">
                 <span class="icon">
-                  <i class="fa-regular fa-square-plus light-purple-icon"></i>
+                  <i class="fa-regular fa-square-plus"></i>
                 </span>
-                <span class="icon-label light-purple-label">Gestion</span>
+                <span class="icon-label">Gestion</span>
               </span>
             </a>
           </li>
@@ -54,7 +54,6 @@
       </aside>
     </div>
     <div class="page-content">
-      <div class="gap-block"></div>
       <router-outlet></router-outlet>
     </div>
   </div>
