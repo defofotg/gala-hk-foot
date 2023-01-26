@@ -8,6 +8,9 @@
 
 @import "../node_modules/bulma/bulma.sass";
 
+@import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
 html,
 body {
   height: 100%;
@@ -19,6 +22,10 @@ body {
 
 .border-radius-5 {
   border-radius: 5px;
+}
+
+.border-radius-10 {
+  border-radius: 10px;
 }
 
 .border-radius-15 {
@@ -55,14 +62,14 @@ body {
 /** Pill components **/
 .team-name-pill {
   @extend .team-name-italic-font;
-  @extend .border-radius-25;
+  @extend .border-radius-10;
   background-color: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(7px);
   padding: 5px 10px;
 }
 
 @mixin content-pill($bg-color, $height) {
-  @extend .border-radius-25;
+  @extend .border-radius-10;
   @extend .gray-box-shadow;
   background-color: $bg-color;
   height: $height;
@@ -70,16 +77,15 @@ body {
 }
 
 @mixin content-pill-var($bg-color, $height) {
-  @extend .border-radius-25;
+  @extend .border-radius-10;
   @extend .gray-box-shadow;
   background-color: $bg-color;
   min-height: $height;
-  padding-bottom: 10px;
   width: 100%;
 }
 
 @mixin content-pill-bg($url, $x, $y, $size) {
-  @extend .border-radius-25;
+  @extend .border-radius-10;
   background-image: url($url);
   background-position-x: $x;
   background-position-y: $y;
@@ -91,16 +97,16 @@ body {
   width: 100%;
 }
 
-.content-pill-white-bg {
-  @include content-pill(rgba(255, 255, 255, 0.9), 180px);
+.content-pill-absolute-main {
+  @include content-pill($spanish-blue, 242px);
 }
 
 .content-pill-grey-bg {
   @include content-pill($light-grey, 300px);
 }
 
-.content-pill-blue-bg {
-  @include content-pill-var($light-blue-bg, 200px);
+.content-pill-variable-main {
+  @include content-pill-var($spanish-blue, 200px);
 }
 
 .content-pill-purple-bg {
@@ -176,6 +182,7 @@ body {
 }
 
 p.team-name {
+  @extend .white-text;
   &.red {
     &::before {
       @extend .red-dot;
@@ -481,5 +488,41 @@ p.team-name {
 
 .black-font {
   color: black;
+}
+
+.white-font {
+  color: $white;
+}
+
+.grey-font {
+  color: $white-secondary;
+}
+
+/* icon button component */
+.icon-button-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  .icon-button-content {
+    align-self: center;
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.slider-dots {
+  display: flex;
+  color: $smoky-black-secondary;
+  justify-content: center;
+  font-size: 10px;
+  width: 100%;
+
+  i {
+    margin-right: 5px;
+  }
 }
 /** End **/

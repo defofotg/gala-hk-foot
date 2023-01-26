@@ -37,6 +37,7 @@
 
 .fixture-title {
   @extend .uppercase-title;
+  @extend .white-text;
 }
 
 .stat-title-font {
@@ -73,6 +74,12 @@
 
 .white-text {
   color: white;
+}
+
+.pill-title {
+  @extend .white-text;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* End fonts */

@@ -1,10 +1,27 @@
-.main-layout {
+#fixture-history.main-layout {
+  position: relative;
+  margin-bottom: 10px;
+  .bg-img {
+    padding-bottom: 10px;
+  }
+
   #head-to-head {
     margin: auto;
     width: 70%;
     p {
       text-align: center;
       margin-top: 6px;
+    }
+
+    & > .icon-button-container {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      .icon-button-content {
+        &.left {
+          background-image: url(../../../../../assets/arrow-left.svg);
+        }
+      }
     }
 
     .matches,
