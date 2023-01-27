@@ -1,20 +1,33 @@
 <div id="event-fixture" class="content-pill-absolute-main main-layout">
-  <div class="bg-img content-pill-bg-hk">
+  <div
+    *ngIf="_eventFixture | async as fixture"
+    class="bg-img content-pill-bg-hk"
+  >
     <p class="fixture-title grey-font has-text-centered-mobile">
-      SANTE DU DIMANCHE - 1
+      <span>{{ fixture.type | fixtureType }}</span> - <span></span>
+      {{ fixture.gameNumber }}
     </p>
-    <div class="event-date has-text-centered-mobile">15 JAN, 13:00</div>
+    <p class="fixture-subtitle grey-font has-text-centered-mobile">
+      <span>{{ fixture.place }}</span>
+    </p>
+    <div class="event-date has-text-centered-mobile">
+      {{ fixture.date | date : "EEE d MMM, HH:mm" : "fr" }}
+    </div>
     <div class="icon-button-container">
       <div class="icon-button-content right"></div>
     </div>
     <div class="teams">
       <div class="home">
         <img src="../../../../../assets/portrait-yellow.png" alt="" />
-        <div class="team-name team-name-pill"><span>CASA BLANCA</span></div>
+        <div class="team-name team-name-pill">
+          <span>{{ fixture.hostingTeam.name }}</span>
+        </div>
       </div>
       <div class="away">
         <img src="../../../../../assets/portrait.png" alt="" />
-        <div class="team-name team-name-pill"><span>KMER BONITOS</span></div>
+        <div class="team-name team-name-pill">
+          <span>{{ fixture.guestTeam.name }}</span>
+        </div>
       </div>
     </div>
   </div>

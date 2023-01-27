@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.3",
     "bulma": "^0.9.4",
     "ngx-toastr": "^15.2.2",
+    "ngx-translate": "*",
     "node-sass": "^8.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

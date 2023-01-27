@@ -8,9 +8,6 @@
 
 @import "../node_modules/bulma/bulma.sass";
 
-@import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-@import "../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
-
 html,
 body {
   height: 100%;
@@ -203,7 +200,7 @@ p.team-name {
   background-color: white;
   margin: auto;
   padding: 7px 0;
-  width: 120px;
+  width: 170px;
 }
 
 .red-dot {

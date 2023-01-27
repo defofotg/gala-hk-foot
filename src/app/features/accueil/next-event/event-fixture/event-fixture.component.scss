@@ -1,8 +1,11 @@
 .main-layout {
   margin-bottom: 10px;
   .bg-img {
-    padding-top: 40px;
+    padding-top: 20px;
     position: relative;
+    p {
+      margin-bottom: 15px;
+    }
 
     .icon-button-container {
       position: absolute;

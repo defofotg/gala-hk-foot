@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from '../authentication/auth.service';
 import { Error } from '../models/login-form-error';
+import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
 import { LoginFormComponent } from './login-form/login-form.component';
 
