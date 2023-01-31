@@ -21,6 +21,7 @@ export enum FixtureStatus {
 }
 
 export interface Team {
+  id: number;
   name: string;
   color: string;
   isHost: boolean;

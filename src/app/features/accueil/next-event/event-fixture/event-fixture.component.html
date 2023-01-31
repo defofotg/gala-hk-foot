@@ -1,6 +1,6 @@
 <div id="event-fixture" class="content-pill-absolute-main main-layout">
   <div
-    *ngIf="_eventFixture | async as fixture"
+    *ngIf="_eventFixture | async as fixture; else loadingFixture"
     class="bg-img content-pill-bg-hk"
   >
     <p class="fixture-title grey-font has-text-centered-mobile">
@@ -32,3 +32,8 @@
     </div>
   </div>
 </div>
+<ng-template #loadingFixture>
+  <div class="loader-container">
+    <app-loader></app-loader>
+  </div>
+</ng-template>

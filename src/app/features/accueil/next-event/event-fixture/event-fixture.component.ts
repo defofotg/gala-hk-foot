@@ -3,11 +3,12 @@ import { Component, LOCALE_ID, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { EventService } from 'src/app/http/event.service';
 import { EventFixture } from 'src/app/models/next-event';
+import { LoaderComponent } from 'src/app/shared/loader/loader.component';
 import { FixtureTypePipe } from 'src/app/shared/pipes/fixture-type.pipe';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, FixtureTypePipe],
+  imports: [CommonModule, LoaderComponent, FixtureTypePipe],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   selector: 'app-event-fixture',
   templateUrl: './event-fixture.component.html',
