@@ -1,8 +1,16 @@
-<div class="layout-container">
-  <app-event-fixture></app-event-fixture>
-  <app-fixture-history></app-fixture-history>
+<div
+  class="layout-container"
+  *ngIf="_eventFixture | async as eventFixture; else loadingFixture"
+>
+  <app-event-fixture [fixture]="eventFixture.fixture"></app-event-fixture>
+  <app-fixture-history [stats]="eventFixture.stats"></app-fixture-history>
 </div>
 <div class="slider-dots">
   <i class="fa-solid fa-circle"></i>
   <i class="fa-solid fa-circle"></i>
 </div>
+<ng-template #loadingFixture>
+  <div class="layout-container">
+    <app-loader></app-loader>
+  </div>
+</ng-template>

@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
 })
 export class StatComponent {
   private _title = '';
-  private _value = '';
+  private _value = 0;
 
   @Input() set title(value: string) {
     this._title = value;
@@ -20,11 +20,11 @@ export class StatComponent {
     return this._title;
   }
 
-  @Input() set value(value: string) {
+  @Input() set value(value: number) {
     this._value = value;
   }
 
-  get value(): string {
+  get value(): number {
     return this._value;
   }
 }

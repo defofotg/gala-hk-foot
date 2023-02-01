@@ -1,17 +1,7 @@
-export class EventFixture {
-  type!: FixtureType;
-  gameNumber?: number;
-  date!: Date;
-  place!: string;
-  hostingTeam!: Team;
-  guestTeam!: Team;
-  status!: FixtureStatus;
-}
-
-export enum FixtureType {
-  SANTE = 'SANTE',
-  FRIENDLY = 'FRIENDLY',
-  ALLSTAR = 'ALLSTAR',
+export interface EventFixture {
+  fixture: MatchInfos;
+  stats: MatchStats;
+  status: FixtureStatus;
 }
 
 export enum FixtureStatus {
@@ -20,9 +10,37 @@ export enum FixtureStatus {
   UPCOMING = 3,
 }
 
+export interface MatchInfos {
+  type: FixtureType;
+  gameNumber?: number;
+  date: Date;
+  place: string;
+  hostingTeam: Team;
+  guestTeam: Team;
+}
+
+export interface MatchStats {
+  hostingTeam: Team;
+  guestTeam: Team;
+  hostStats: FixtureStats;
+  guestStats: FixtureStats;
+}
+
+export enum FixtureType {
+  SANTE = 'SANTE',
+  FRIENDLY = 'FRIENDLY',
+  ALLSTAR = 'ALLSTAR',
+}
+
 export interface Team {
   id: number;
   name: string;
   color: string;
   isHost: boolean;
+}
+
+export interface FixtureStats {
+  wins: number;
+  draws: number;
+  goals: number;
 }

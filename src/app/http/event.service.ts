@@ -11,7 +11,7 @@ const EVENT_API = 'http://localhost:8080/api/fixture/';
 export class EventService {
   constructor(private http: HttpClient) {}
 
-  public getNextEvent(): Observable<EventFixture> {
+  public getNextEventInfo(): Observable<EventFixture> {
     return this.http.get<EventFixture>(EVENT_API + 'next');
   }
 }

@@ -191,6 +191,12 @@ p.team-name {
       @extend .yellow-dot;
     }
   }
+
+  &.green {
+    &::before {
+      @extend .green-dot;
+    }
+  }
 }
 
 .event-date {
@@ -209,6 +215,10 @@ p.team-name {
 
 .yellow-dot {
   @include color-dot($yellow);
+}
+
+.green-dot {
+  @include color-dot(green);
 }
 
 //hr gris avec fade

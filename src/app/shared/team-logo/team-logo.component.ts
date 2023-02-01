@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Team } from 'src/app/models/next-event';
 
 @Component({
   standalone: true,
@@ -9,19 +10,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./team-logo.component.scss'],
 })
 export class TeamLogoComponent {
-  private _color = '';
+  private _color = 'yellow';
   private _name = '';
 
-  @Input() set color(value: string) {
-    this._color = value;
+  @Input() set team(value: Team) {
+    if (value) {
+      this._color = value.color;
+      this._name = value.name;
+    }
   }
 
   get color(): string {
     return this._color;
-  }
-
-  @Input() set name(value: string) {
-    this._name = value;
   }
 
   get name(): string {
