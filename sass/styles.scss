@@ -33,6 +33,10 @@ body {
   border-radius: 25px;
 }
 
+.border-radius-50 {
+  border-radius: 50px;
+}
+
 .border-left-radius-15 {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -114,12 +118,21 @@ body {
   @include content-pill-var($light-yellow, 200px);
 }
 
+.content-pill-bg-ranking {
+  @include content-pill-bg("../src/assets/army-badge.svg", -15%, 0, 200px);
+}
+
 .content-pill-bg-hk {
   @include content-pill-bg("../src/assets/hk.svg", 46%, 50%, 1200px);
 }
 
 .content-pill-bg-champions {
-  @include content-pill-bg("../src/assets/champions-pink.svg", 49%, -5px, 30%);
+  @include content-pill-bg(
+    "../src/assets/champions-blue.svg",
+    50%,
+    -10px,
+    105%
+  );
 }
 
 /** Pill components end **/
@@ -308,10 +321,11 @@ p.team-name {
   display: flex;
   .score-away,
   .score-home {
+    @extend .border-radius-5;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $lighter-purple;
+    background-color: white;
     height: 50px;
     width: 50px;
     margin: 0 2px 5px 2px;

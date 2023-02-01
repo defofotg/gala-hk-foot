@@ -1,6 +1,6 @@
 .side-bar {
   position: fixed;
-  bottom: 0px;
+  bottom: 10px;
   left: 0px;
   display: block;
   height: 60px;
@@ -11,7 +11,8 @@
   aside {
     height: inherit;
     display: flex;
-
+    margin: 0 auto;
+    width: 94%;
     img,
     p {
       display: none;
