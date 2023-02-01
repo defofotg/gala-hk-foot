@@ -1,15 +1,21 @@
 <div class="main-layout">
-  <div class="main-body blue-bg border-bottom-radius-15">
+  <div class="main-body grey-font blue-bg border-bottom-radius-15">
     <p class="greeting-txt">Hello,</p>
     <p *ngIf="user" class="greeting-txt">
       <span class="user-firstname">{{ user }}</span> !
     </p>
     <p>
-      Bienvenue sur <strong>{{ applicationName }}</strong
+      Bienvenue sur <strong class="white-font">{{ applicationName }}</strong
       >.
     </p>
   </div>
+
+  <p class="pill-title">Prochain match</p>
   <app-next-event></app-next-event>
+
+  <p class="pill-title">Dernier match</p>
   <app-last-event></app-last-event>
+
+  <p class="pill-title">3 Meilleurs buteurs</p>
   <app-top-scorers></app-top-scorers>
 </div>

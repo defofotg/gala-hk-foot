@@ -1,5 +1,26 @@
 .main-layout {
+  margin-bottom: 10px;
+  .loader-container {
+    height: 100%;
+  }
+
   .bg-img {
+    padding-top: 20px;
+    position: relative;
+    p {
+      margin-bottom: 15px;
+    }
+
+    .icon-button-container {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      .icon-button-content {
+        &.right {
+          background-image: url(../../../../../assets/arrow-right.svg);
+        }
+      }
+    }
     .teams {
       position: absolute;
       bottom: 0;
@@ -18,7 +39,7 @@
         width: 50%;
         img {
           position: absolute;
-          height: 120px;
+          height: 140px;
           bottom: 0;
         }
 

@@ -16,7 +16,7 @@
       scrollbar-width: none;
 
       &.menu-not-hidden {
-        height: calc(100% - 110px);
+        height: calc(100% - 50px);
       }
 
       &::-webkit-scrollbar {

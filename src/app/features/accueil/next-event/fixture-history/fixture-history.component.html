@@ -1,17 +1,28 @@
-<div class="content-pill-blue-bg main-layout">
-  <app-versus-team></app-versus-team>
-  <div id="head-to-head">
-    <p class="head-to-head-title-font">TETE à TETE</p>
-    <div class="fadeout-ends"><hr /></div>
-    <div class="stats">
-      <div class="matches">
-        <app-stat [title]="win" value="17"></app-stat>
-        <app-stat [title]="draw" value="12"></app-stat>
-        <app-stat [title]="win" value="16"></app-stat>
+<div id="fixture-history" class="content-pill-variable-main main-layout">
+  <div class="bg-img content-pill-bg-hk">
+    <app-versus-team
+      [hostTeam]="stats.hostingTeam"
+      [guestTeam]="stats.guestTeam"
+    ></app-versus-team>
+    <div id="head-to-head">
+      <p class="head-to-head-title-font grey-font">TETE à TETE</p>
+      <div class="icon-button-container">
+        <div class="icon-button-content left"></div>
       </div>
-      <div class="goals">
-        <app-stat [title]="scored" value="37"></app-stat>
-        <app-stat [title]="scored" value="46"></app-stat>
+      <div class="fadeout-ends"><hr /></div>
+      <div class="stats">
+        <div class="matches">
+          <app-stat [title]="win" [value]="stats.hostStats.wins"></app-stat>
+          <app-stat [title]="draw" [value]="stats.hostStats.draws"></app-stat>
+          <app-stat [title]="win" [value]="stats.guestStats.wins"></app-stat>
+        </div>
+        <div class="goals">
+          <app-stat [title]="scored" [value]="stats.hostStats.goals"></app-stat>
+          <app-stat
+            [title]="scored"
+            [value]="stats.guestStats.goals"
+          ></app-stat>
+        </div>
       </div>
     </div>
   </div>

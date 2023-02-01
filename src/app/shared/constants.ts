@@ -10,3 +10,9 @@ export const statConstants = {
 };
 
 export const appName = 'Gala HK';
+
+export const fixtureTypeLabels = {
+  SANTE: 'Santé du dimanche',
+  FRIENDLY: 'Match Amical',
+  ALLSTAR: 'Match des étoiles LT - CE',
+};

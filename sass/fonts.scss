@@ -2,9 +2,12 @@
 .uppercase-title {
   font-size: 17px;
   font-weight: bold;
-  margin-bottom: 20px;
   padding-top: 10px;
   text-transform: uppercase;
+}
+
+.text-font-13 {
+  font-size: 13px;
 }
 
 .event-date-font {
@@ -37,6 +40,11 @@
 
 .fixture-title {
   @extend .uppercase-title;
+  @extend .white-text;
+}
+
+.fixture-subtitle {
+  @extend .text-font-13;
 }
 
 .stat-title-font {
@@ -73,6 +81,12 @@
 
 .white-text {
   color: white;
+}
+
+.pill-title {
+  @extend .white-text;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* End fonts */
